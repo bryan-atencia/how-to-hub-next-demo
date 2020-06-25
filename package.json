@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "netlify-cms": "^2.10.51",
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

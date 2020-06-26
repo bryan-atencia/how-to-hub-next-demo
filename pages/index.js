@@ -36,6 +36,7 @@ export default (props) => {
 export async function getStaticProps() {
   return {
     props: {
+      fallback: true,
       data: getHows()
     }
   }

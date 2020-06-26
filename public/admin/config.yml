@@ -2,14 +2,14 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "/content/images/uploads"
+media_folder: "/public/admin/images/uploads"
 publish_mode: editorial_workflow
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     extension: "json"
     label: "Blog" # Used in the UI
-    folder: "/content/collections/_posts/blog" # The path to the folder where the documents are stored
+    folder: "/public/admin/collections/_posts/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -23,7 +23,7 @@ collections:
   - name: "How-tos" # Used in routes, e.g., /admin/collections/blog
     extension: "json"
     label: "How-tos" # Used in the UI
-    folder: "/content/collections/How-tos" # The path to the folder where the documents are stored
+    folder: "/public/admin/collections/How-tos" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -33,7 +33,7 @@ collections:
   - name: "Categories" # Used in routes, e.g., /admin/collections/blog
     extension: "json"
     label: "Categories" # Used in the UI
-    folder: "/content/collections/Categories" # The path to the folder where the documents are stored
+    folder: "/public/admin/collections/Categories" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -48,7 +48,7 @@ collections:
   - name: "Subcategories" # Used in routes, e.g., /admin/collections/blog
     extension: "json"
     label: "Subcategories" # Used in the UI
-    folder: "/content/collections/Subcategories" # The path to the folder where the documents are stored
+    folder: "/public/admin/collections/Subcategories" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -63,7 +63,7 @@ collections:
   - name: "Steps" # Used in routes, e.g., /admin/collections/blog
     extension: "json"
     label: "Steps" # Used in the UI
-    folder: "/content/collections/Steps" # The path to the folder where the documents are stored
+    folder: "/public/admin/collections/Steps" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter

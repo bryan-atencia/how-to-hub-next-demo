@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout.js'
 
-import getHows from '../functions/getHows.js'
+import getHows from '../public/admin/functions/getHows.js'
 
 export default (props) => {
 

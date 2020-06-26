@@ -24,9 +24,10 @@ export default (props) => {
             <Head>
               <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
             </Head>
+            <h1>Home</h1>
             <div>{
               props.data.map((x, y) => {
-                return <div key={ y }>{ x.name }</div>
+                return <Link href="/category" key={ y }><a style={{ display:"block", margin:"10px 0" }}>{ x.name }</a></Link>
               })
             }</div>
           </Layout>

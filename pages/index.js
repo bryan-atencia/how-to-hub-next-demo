@@ -1,10 +1,13 @@
+import { useEffect } from "react"
+
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout.js'
-import { useEffect } from "react"
 
+import getHows from '../functions/getHows.js'
 
-export default () => {
+export default (props) => {
+
   useEffect(()=>{
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
@@ -21,6 +24,18 @@ export default () => {
             <Head>
               <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
             </Head>
-            <div>Home</div>
+            <div>{
+              props.data.map((x, y) => {
+                return <div key={ y }>{ x.name }</div>
+              })
+            }</div>
           </Layout>
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      data: getHows()
+    }
+  }
 }

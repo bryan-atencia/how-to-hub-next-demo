@@ -21,9 +21,6 @@ export default (props) => {
   },[])
 
   return <Layout>
-            <Head>
-              <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-            </Head>
             <h1>Home</h1>
             <div>{
               props.data.map((x, y) => {

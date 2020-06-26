@@ -4,21 +4,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout.js'
 
-import getHows from '../public/admin/functions/getHows.js'
+import getCategories from '../public/admin/functions/getCategories.js'
 
 export default (props) => {
-
-  useEffect(()=>{
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  },[])
 
   return <Layout>
             <h1>Home</h1>
@@ -38,7 +26,7 @@ export async function getStaticProps() {
   return {
     props: {
       fallback: true,
-      data: getHows()
+      data: getCategories()
     }
   }
 }

@@ -44,7 +44,7 @@ export default (props) => {
                 data && data.map((x, y) => {
                   return <Grid item key={ y }>
                             <Grid className={ classes.image }></Grid>
-                              <Link href={`/category/${x.id}`} className={ classes.actionLink }>
+                              <Link href={`/category/${x.name.split(" ").join("")}`} className={ classes.actionLink }>
                                 <Typography className={ classes.actionText }>{ x.name }</Typography>
                               </Link>
                             </Grid>

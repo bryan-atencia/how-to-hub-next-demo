@@ -54,8 +54,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default (props) => {
 
-  const classes = useStyles()
   const { data } = props
+  const classes = useStyles()
   const descrip = data.heroDescription ? data.heroDescription.split("<b>") : []
 
   const renderSubCategories = () => {

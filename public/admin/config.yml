@@ -27,9 +27,9 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "id", name: "id", widget: "number"}
+      - {label: "id", name: "id", widget: "string"}
       - {label: "name", name: "name", widget: "string"}
-      - {label: "image", name: "image", widget: "string"}
+      - {label: "image", name: "image", widget: "image"}
       - {label: "title", name: "title", widget: "string"}
       - {label: "subtitle", name: "subtitle", widget: "string"}
       - {label: "actionText", name: "actionText", widget: "string"}
@@ -37,6 +37,7 @@ collections:
       - {label: "heroTitle", name: "heroTitle", widget: "string"}
       - {label: "heroDescription", name: "heroDescription", widget: "string"}
       - {label: "heroActionLink", name: "heroActionLink", widget: "string"}
+      - {label: "subcategories", name: "subcategories", widget: "relation", collection: "Subcategories", valueField:"title", searchFields: ["title"], multiple: true}
 
   - name: "Subcategories" # Used in routes, e.g., /admin/collections/blog
     extension: "json"
@@ -52,6 +53,8 @@ collections:
       - {label: "pageTitle", name: "pageTitle", widget: "string"}
       - {label: "pageDescription", name: "pageDescription", widget: "string"}
       - {label: "pageActionLink", name: "heroActionLink", widget: "string"}
+      - {label: "steps", name: "steps", widget: "relation", collection: "Steps", valueField: "title", searchField: ["title"], multiple: true}
+
 
   - name: "Steps" # Used in routes, e.g., /admin/collections/blog
     extension: "json"

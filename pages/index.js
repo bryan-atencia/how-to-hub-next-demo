@@ -22,11 +22,15 @@ export default (props) => {
 
   return <Layout>
             <h1>Home</h1>
-            <div>{
-              props.data && props.data.map((x, y) => {
-                return <Link href="/category" key={ y }><a style={{ display:"block", margin:"10px 0" }}>{ x.name }</a></Link>
-              })
-            }</div>
+              <div>
+                {
+                  props.data && props.data.map((x, y) => {
+                    return <Link href="/category" key={ y }>
+                              <a style={{ display:"block", margin:"10px 0" }}>{ x.name }</a>
+                            </Link>
+                  })
+                }
+              </div>
           </Layout>
 }
 

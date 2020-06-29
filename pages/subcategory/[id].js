@@ -27,10 +27,6 @@ import { Grid, Typography, withStyles } from "@material-ui/core"
     margin:"20px 0",
     textTransform:"uppercase"
   },
-  homeLink: {
-    color:"black",
-    textDecoration:"none"
-  },
   tileTitle: {
     margin:"15px auto 0",
     fontWeight:"bold"
@@ -108,7 +104,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      subcategoryData: getSubcategories()
+      subcategoryData: getSubcategories().filter(x => x.title.split(" ").join("") == params.id)[0]
     }
   }
 }

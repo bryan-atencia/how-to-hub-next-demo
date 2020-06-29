@@ -75,10 +75,10 @@ export default class Subcategory extends React.Component {
                 <Typography variant="h6">{ subcategoryData.pageDescription }</Typography>
                 <Grid container>
                   <Typography className={ classes.tileActionText } style={{ marginRight:"20px" }}>{ subcategoryData.pageActionLink }</Typography>
-                  <Link to="/" className={ classes.homeLink } style={{ marginRight:"20px" }}>
+                  <Link href="/" style={{ marginRight:"20px" }}>
                     <Typography variant="body1" className={ classes.tileActionText }>HOME</Typography>
                   </Link>
-                  <Link to={subcategoryData.category ? `/category/${subcategoryData.category.id}` : "/"} className={ classes.homeLink }>
+                  <Link href={subcategoryData.category ? `/category/${subcategoryData.category.id}` : "/"}>
                     <Typography variant="body1" className={ classes.tileActionText }>BACK TO CATEGORY</Typography>
                   </Link>
                 </Grid>
@@ -108,7 +108,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      subcategoryData: getSubcategories().filter(x => x.title.split(" ").join("") == params.id)[0]
+      subcategoryData: getSubcategories()
     }
   }
 }

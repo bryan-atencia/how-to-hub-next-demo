@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../../components/layout.js'
 
-import getSubategories from "../../public/admin/functions/getSubcategories.js"
+import getSubcategories from "../../public/admin/functions/getSubcategories.js"
 
 
 import { Grid, Typography, withStyles } from "@material-ui/core"

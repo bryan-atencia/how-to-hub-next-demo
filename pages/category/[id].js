@@ -83,8 +83,6 @@ export default class Category extends React.Component {
     const { data, classes } = this.props
     const descrip = data.heroDescription ? data.heroDescription.split("<b>") : []
 
-    console.log(data, 'the data')
-
     return <Layout>
               <Grid className={ classes.mainGrid }>
                 <Typography variant="h2" >{ data.title }</Typography>

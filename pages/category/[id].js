@@ -69,7 +69,7 @@ export default class Category extends React.Component {
                               <Grid container direction="column" alignItems="center" justify="center">
                                 <Typography variant="h6" className={ classes.tileTitle }>{ x.title }</Typography>
                                 <Typography variant="subtitle1" className={ classes.tileSubTitle } style={{ width:"270px" }}>{ x.description }</Typography>
-                                <Link href={ `/subcategory/${x.id}` }>
+                                <Link href={ `/subcategory/${x.title.split(" ").join("")}` }>
                                   <Typography variant="body1" className={ classes.tileActionText }>{ x.actionText }</Typography>
                                 </Link>
                               </Grid>

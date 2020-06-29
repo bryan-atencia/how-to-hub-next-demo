@@ -1,12 +1,15 @@
+import React from "react"
+import regeneratorRuntime from "regenerator-runtime";
+
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout.js'
 
 import getCategories from '../public/admin/functions/getCategories.js'
 
-import { Grid, Typography, makeStyles } from "@material-ui/core"
+import { Grid, Typography, withStyles } from "@material-ui/core"
 
-const useStyles = makeStyles((theme) => ({
+@withStyles((theme) => ({
   image: {
     background:"grey",
     height:"250px",
@@ -32,19 +35,18 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export default (props) => {
+export default class Main extends React.Component {
 
-  const { data } = props
-  const classes = useStyles()
+  renderCategories = () => {
 
-  const renderCategories = () => {
+    const { data, classes } = this.props
 
     return <Grid container justify="space-between" alignItems="center">
             {
                 data && data.map((x, y) => {
                   return <Grid item key={ y }>
                             <Grid className={ classes.image }></Grid>
-                              <Link href={`/category/${x.name.split(" ").join("")}`} className={ classes.actionLink }>
+                              <Link href={`/category/${x.name.split(" ").join("")}`}>
                                 <Typography className={ classes.actionText }>{ x.name }</Typography>
                               </Link>
                             </Grid>
@@ -53,13 +55,17 @@ export default (props) => {
           </Grid>
   }
 
-  return <Layout>
-            <Grid className={ classes.mainGrid }>
-              <Typography variant="h2" gutterBottom>The Bartender</Typography>
-              <Typography variant="h6">Your complete guide to men’s apparel and accessories. Browse style tips, size guides, and steps to master tying a necktie, tying a bow tie, folding a pocket square, and more.</Typography>
-            </Grid>
-            {renderCategories()}
-          </Layout>
+  render() {
+    const { data, classes } = this.props
+
+    return <Layout>
+              <Grid className={ classes.mainGrid }>
+                <Typography variant="h2" gutterBottom>The Bartender</Typography>
+                <Typography variant="h6">Your complete guide to men’s apparel and accessories. Browse style tips, size guides, and steps to master tying a necktie, tying a bow tie, folding a pocket square, and more.</Typography>
+              </Grid>
+              {this.renderCategories()}
+            </Layout>
+  }
 }
 
 export async function getStaticProps() {

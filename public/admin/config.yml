@@ -24,7 +24,7 @@ collections:
       - {label: "heroTitle", name: "heroTitle", widget: "string"}
       - {label: "heroDescription", name: "heroDescription", widget: "string"}
       - {label: "heroActionLink", name: "heroActionLink", widget: "string"}
-      # - {label: "Subcategories", name: "subcategories", widget: "relation", collection: "Subcategories", valueField:"title", searchFields: ["title"], multiple: true}
+      - {label: "Subcategories", name: "subcategories", widget: "relation", collection: "Subcategories", valueField:"title", searchFields: ["title"], multiple: true}
 
   - name: "Subcategories" # Used in routes, e.g., /admin/collections/blog
     extension: "json"

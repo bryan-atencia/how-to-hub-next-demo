@@ -46,7 +46,7 @@ export default class Main extends React.Component {
                 data && data.map((x, y) => {
                   return <Grid item key={ y }>
                             <Grid className={ classes.image }></Grid>
-                              <Link href={`/category/${x.name.split(" ").join("")}`}>
+                             <Link href={`/category/${x.name.split(" ").join("")}`}>
                                 <Typography className={ classes.actionText }>{ x.name }</Typography>
                               </Link>
                             </Grid>

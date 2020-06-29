@@ -65,7 +65,7 @@ export default class Subcategory extends React.Component {
     const { subcategoryData } = this.props
     const { classes } = this.props
 
-    return <Grid>
+    return <Layout>
               <Grid style={{ maxWidth:"900px" }}>
                 <Typography variant="h2">{ subcategoryData.pageTitle }</Typography>
                 <Typography variant="h6">{ subcategoryData.pageDescription }</Typography>
@@ -80,7 +80,7 @@ export default class Subcategory extends React.Component {
                 </Grid>
               </Grid>
               <Grid>{ this.renderSteps() }</Grid>
-            </Grid>
+            </Layout>
   }
 }
 

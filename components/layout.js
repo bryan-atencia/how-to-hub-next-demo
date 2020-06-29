@@ -17,7 +17,7 @@ export default ({ children }) => {
     }
   },[])
 
-  return <div>
+  return <div style={{ maxWidth:"1180px", margin:"20px auto" }}>
           <Head>
             <title>How to hub demo</title>
             <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

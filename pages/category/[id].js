@@ -63,7 +63,7 @@ export default class Category extends React.Component {
 
     return <Grid container style={{ textAlign:"center" }}>
               {
-                  data.subcategories.map((x, y) => {
+                  data.Subcategories.map((x, y) => {
                     return <Grid container item key={ y } xs={12} sm={3} alignItems="center" direction="column">
                               <Grid className={ classes.image }></Grid>
                               <Grid container direction="column" alignItems="center" justify="center">
@@ -82,7 +82,7 @@ export default class Category extends React.Component {
 
     const { data, classes } = this.props
     const descrip = data.heroDescription ? data.heroDescription.split("<b>") : []
-    console.log(data, 'the data')
+
     return <Layout>
               <Grid className={ classes.mainGrid }>
                 <Typography variant="h2" >{ data.title }</Typography>
@@ -94,7 +94,7 @@ export default class Category extends React.Component {
                   </Link>
                 </Grid>
               </Grid>
-              { data.subcategories && renderSubCategories() }
+              { data.Subcategories && this.renderSubCategories() }
               <Grid container style={{ margin:"50px auto" }}>
                 <Grid item xs={ 12 } sm={ 7 }>
                   <Grid className={ classes.heroImage }></Grid>

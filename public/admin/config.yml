@@ -25,6 +25,19 @@ collections:
       - {label: "heroDescription", name: "heroDescription", widget: "string"}
       - {label: "heroActionLink", name: "heroActionLink", widget: "string"}
       - {label: "Subcategories", name: "Subcategories", widget: "relation", collection: "Subcategories", valueField: "title", searchFields: ["title"], multiple: true, displayFields: ["{{title}}"]}
+      - label: "SubCats"
+        name: "SubCats"
+        widget: "list"
+        fields:
+          - {label: "media", name: "heroImage", widget: "image"}
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "description", name: "description", widget: "string"}
+          - {label: "actionText", name: "actionText", widget: "string"}
+          - {label: "pageTitle", name: "pageTitle", widget: "string"}
+          - {label: "pageDescription", name: "pageDescription", widget: "string"}
+          - {label: "pageActionLink", name: "pageActionLink", widget: "string"}
+          - {label: "steps", name: "steps", widget: "relation", collection: "Steps", valueField: "title", searchFields: ["title"], multiple: true, displayFields: ["{{title}}"]}
+          - {label: "category", name: "category", widget: "relation", collection: "Categories", valueField: "name", searchFields: ["name"], multiple: false, displayFields: ["{{name}}"]}
 
   - name: "Subcategories" # Used in routes, e.g., /admin/collections/blog
     extension: "json"

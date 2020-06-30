@@ -41,7 +41,7 @@ collections:
       - {label: "pageDescription", name: "pageDescription", widget: "string"}
       - {label: "pageActionLink", name: "pageActionLink", widget: "string"}
       - {label: "steps", name: "steps", widget: "relation", collection: "Steps", valueField: "title", searchFields: ["title"], multiple: true, displayFields: ["{{title}}"]}
-      - {label: "category", name: "category", widget: "relation", collection: "Categories", valueField: "title", searchFields: ["title"], multiple: false, displayFields: ["{{title}}"]}
+      - {label: "category", name: "category", widget: "relation", collection: "Categories", valueField: "name", searchFields: ["title"], multiple: false, displayFields: ["{{title}}"]}
 
 
   - name: "Steps" # Used in routes, e.g., /admin/collections/blog

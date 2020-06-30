@@ -3,10 +3,9 @@ import regeneratorRuntime from "regenerator-runtime";
 
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '../../components/layout.js'
+import Layout from '../../../components/layout.js'
 
-import getSubcategories from "../../public/admin/functions/getSubcategories.js"
-
+import getSubcategories from "../../../public/admin/functions/getSubcategories.js"
 
 import { Grid, Typography, withStyles } from "@material-ui/core"
 
@@ -93,7 +92,8 @@ export async function getStaticPaths() {
   paths = paths.map(x => {
     return {
       params: {
-        id: [x.title.split(" ").join("")]
+        category:"neckties",
+        id: x.title.split(" ").join(""),
       }
     }
   })
@@ -107,8 +107,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      subcategoryData: getSubcategories().filter(x => x.title.split(" ").join("") == params.id[1])[0],
-      category: params.id[0]
+      subcategoryData: getSubcategories().filter(x => x.title.split(" ").join("") == params.id)[0]
     }
   }
 }

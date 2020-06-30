@@ -24,7 +24,7 @@ collections:
       - {label: "heroTitle", name: "heroTitle", widget: "string"}
       - {label: "heroDescription", name: "heroDescription", widget: "string"}
       - {label: "heroActionLink", name: "heroActionLink", widget: "string"}
-      - {label: "Subcategories", name: "Subcategories", widget: "relation", collection: "Subcategories", valueField: "{{slug}}", searchFields: ["title"], multiple: true, displayFields: ["{{title}}"]}
+      - {label: "Subcategories", name: "Subcategories", widget: "relation", collection: "Subcategories", valueField: "title", searchFields: ["title"], multiple: true, displayFields: ["{{title}}"]}
 
   - name: "Subcategories" # Used in routes, e.g., /admin/collections/blog
     extension: "json"
@@ -40,7 +40,8 @@ collections:
       - {label: "pageTitle", name: "pageTitle", widget: "string"}
       - {label: "pageDescription", name: "pageDescription", widget: "string"}
       - {label: "pageActionLink", name: "pageActionLink", widget: "string"}
-      - {label: "steps", name: "steps", widget: "relation", collection: "Steps", valueField: "{{slug}}", searchFields: ["title"], multiple: true, displayFields: ["{{title}}"]}
+      - {label: "steps", name: "steps", widget: "relation", collection: "Steps", valueField: "title", searchFields: ["title"], multiple: true, displayFields: ["{{title}}"]}
+      - {label: "category", name: "category", widget: "relation", collection: "Categories", valueField: "title", searchFields: ["title"], multiple: false, displayFields: ["{{title}}"]}
 
 
   - name: "Steps" # Used in routes, e.g., /admin/collections/blog

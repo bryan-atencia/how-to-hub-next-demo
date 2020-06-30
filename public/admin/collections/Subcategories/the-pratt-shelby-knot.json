@@ -1,16 +1,18 @@
 {
   "heroImage": "/public/admin/images/uploads/sample.jpeg",
-  "title": "The Pratt (Shelby) Knot",
-  "description": "The Pratt or Shelby tie knot is a wide knot (although not as wide as the Windsor knot) best for achieving a polished look. Follow these steps to tie a tie with a Pratt or Shelby knot.",
   "actionText": "LEARN THE STEPS",
-  "pageTitle": "How to Tie a Tie: Pratt (Shelby) Knot",
-  "pageDescription": "Bow ties are great for formal occasions and for black tie dress code, but also to show your personality. We have the biggest selection of pre-tied bow ties, slim bow ties, diamond tip bow ties, black bow ties, white bow ties and so much more. Follow these steps to learn how to wear a pre-tied bow tie.",
-  "heroActionLink": "Shop Ties",
   "steps": [
     "step 01",
     "step 02",
     "step 03",
     "step 04",
     "step 05"
-  ]
+  ],
+  "pageTitle": "How to Tie a Tie: Pratt (Shelby) Knot",
+  "heroActionLink": "Shop Ties",
+  "pageDescription": "Bow ties are great for formal occasions and for black tie dress code, but also to show your personality. We have the biggest selection of pre-tied bow ties, slim bow ties, diamond tip bow ties, black bow ties, white bow ties and so much more. Follow these steps to learn how to wear a pre-tied bow tie.",
+  "title": "The Pratt (Shelby) Knot",
+  "description": "The Pratt or Shelby tie knot is a wide knot (although not as wide as the Windsor knot) best for achieving a polished look. Follow these steps to tie a tie with a Pratt or Shelby knot.",
+  "category": "Neck Tie",
+  "pageActionLink": "Shop Ties"
 }

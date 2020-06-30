@@ -60,7 +60,7 @@ export default class Subcategory extends React.Component {
   }
 
   render() {
-    const { subcategoryData, classes, category } = this.props
+    const { subcategoryData, classes } = this.props
 
     return <Layout>
             {
@@ -69,11 +69,11 @@ export default class Subcategory extends React.Component {
                                       <Typography variant="h2">{ subcategoryData.pageTitle }</Typography>
                                       <Typography variant="h6">{ subcategoryData.pageDescription }</Typography>
                                       <Grid container>
-                                        <Typography className={ classes.tileActionText } style={{ marginRight:"20px" }}>{ subcategoryData.pageActionLink }</Typography>
+                                        <Typography className={ classes.tileActionText }>{ subcategoryData.pageActionLink }</Typography>
                                         <Link href="/">
                                           <Typography variant="body1" className={ classes.tileActionText }>HOME</Typography>
                                         </Link>
-                                        <Link href={category ? `/category/${category}` : "/"}>
+                                        <Link href={subcategoryData.category ? `/category/${subcategoryData.category.split(" ").join("")}` : "/"}>
                                           <Typography variant="body1" className={ classes.tileActionText }>BACK TO CATEGORY</Typography>
                                         </Link>
                                       </Grid>
@@ -92,7 +92,7 @@ export async function getStaticPaths() {
   paths = paths.map(x => {
     return {
       params: {
-        category:"neckties",
+        category: x.category.split(" ").join(""),
         id: x.title.split(" ").join(""),
       }
     }

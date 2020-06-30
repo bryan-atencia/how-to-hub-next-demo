@@ -36,8 +36,13 @@ collections:
           - {label: "pageTitle", name: "pageTitle", widget: "string"}
           - {label: "pageDescription", name: "pageDescription", widget: "string"}
           - {label: "pageActionLink", name: "pageActionLink", widget: "string"}
-          - {label: "steps", name: "steps", widget: "relation", collection: "Steps", valueField: "title", searchFields: ["title"], multiple: true, displayFields: ["{{title}}"]}
           - {label: "category", name: "category", widget: "relation", collection: "Categories", valueField: "name", searchFields: ["name"], multiple: false, displayFields: ["{{name}}"]}
+          - label: "Steps"
+            name: "Steps"
+            widget: "list"
+            fields:
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "description", name: "description", widget: "string"}
 
   - name: "Subcategories" # Used in routes, e.g., /admin/collections/blog
     extension: "json"

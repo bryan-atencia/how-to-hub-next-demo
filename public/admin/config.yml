@@ -39,7 +39,7 @@ collections:
       - {label: "actionText", name: "actionText", widget: "string"}
       - {label: "pageTitle", name: "pageTitle", widget: "string"}
       - {label: "pageDescription", name: "pageDescription", widget: "string"}
-      - {label: "pageActionLink", name: "heroActionLink", widget: "string"}
+      - {label: "pageActionLink", name: "pageActionLink", widget: "string"}
       - {label: "steps", name: "steps", widget: "relation", collection: "Steps", valueField: "{{slug}}", searchFields: ["title"], multiple: true, displayFields: ["{{title}}"]}
 
 

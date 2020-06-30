@@ -36,7 +36,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/subcategory/[id]": [
+    "/subcategory/[...id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

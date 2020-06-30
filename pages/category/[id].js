@@ -59,9 +59,9 @@ export default class Category extends React.Component {
 
   renderSubCategories = () => {
 
-    const { data, classes } = this.props
+    const { data, classes, id } = this.props
 
-    return <Grid container style={{ textAlign:"center" }}>
+    return <Grid container style={{ textAlign:"center" }} justify="space-between">
               {
                   data.Subcategories.map((x, y) => {
                     return <Grid container item key={ y } xs={12} sm={3} alignItems="center" direction="column">
@@ -69,7 +69,7 @@ export default class Category extends React.Component {
                               <Grid container direction="column" alignItems="center" justify="center">
                                 <Typography variant="h6" className={ classes.tileTitle }>{ x.title }</Typography>
                                 <Typography variant="subtitle1" className={ classes.tileSubTitle } style={{ width:"270px" }}>{ x.description }</Typography>
-                                <Link href={ `/subcategory/${x.title.split(" ").join("")}` }>
+                                <Link href={ `/subcategory/${id}/${x.title.split(" ").join("")}` }>
                                   <Typography variant="body1" className={ classes.tileActionText }>{ x.actionText }</Typography>
                                 </Link>
                               </Grid>
@@ -129,7 +129,8 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      data: getCategories().filter(x => x.name.split(" ").join("") == params.id)[0]
+      data: getCategories().filter(x => x.name.split(" ").join("") == params.id)[0],
+      id: params.id
     }
   }
 }

@@ -1,10 +1,6 @@
 {
-  "title": "The Half Windsor Knot",
-  "description": "The Half Windsor tie knot is a versatile, symmetrical knot best for light to medium weight fabrics like cotton, silk, linen and knit. Follow these steps to tie a tie with a Half Windsor knot.",
+  "heroImage": "/public/admin/images/uploads/sample.jpeg",
   "actionText": "LEARN THE STEPS",
-  "pageTitle": "How to Tie a Tie: Half Windsor Knot",
-  "pageDescription": "Bow ties are great for formal occasions and for black tie dress code, but also to show your personality. We have the biggest selection of pre-tied bow ties, slim bow ties, diamond tip bow ties, black bow ties, white bow ties and so much more. Follow these steps to learn how to wear a pre-tied bow tie.",
-  "heroActionLink": "Shop Ties",
   "steps": [
     "step 01",
     "step 02",
@@ -12,5 +8,11 @@
     "step 04",
     "step 05"
   ],
-  "heroImage": "/public/admin/images/uploads/sample.jpeg"
+  "pageTitle": "How to Tie a Tie: Half Windsor Knot",
+  "heroActionLink": "Shop Ties",
+  "pageDescription": "Bow ties are great for formal occasions and for black tie dress code, but also to show your personality. We have the biggest selection of pre-tied bow ties, slim bow ties, diamond tip bow ties, black bow ties, white bow ties and so much more. Follow these steps to learn how to wear a pre-tied bow tie.",
+  "title": "The Half Windsor Knot",
+  "description": "The Half Windsor tie knot is a versatile, symmetrical knot best for light to medium weight fabrics like cotton, silk, linen and knit. Follow these steps to tie a tie with a Half Windsor knot.",
+  "category": "Neck Tie",
+  "pageActionLink": "Shop Ties"
 }
